@@ -1,9 +1,10 @@
 package pl.com.bottega.cymes.showscheduler.domain;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
+import pl.com.bottega.cymes.showscheduler.domain.ports.ShowSchedulerConfiguration;
 
 import java.time.Duration;
 
@@ -11,7 +12,7 @@ import static java.time.temporal.ChronoUnit.MINUTES;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class ShowTest {
 
     @Mock
