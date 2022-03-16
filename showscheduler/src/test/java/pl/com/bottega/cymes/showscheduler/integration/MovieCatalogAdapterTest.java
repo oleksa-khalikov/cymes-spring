@@ -3,11 +3,11 @@ package pl.com.bottega.cymes.showscheduler.integration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedConstruction;
 import org.springframework.beans.factory.annotation.Autowired;
-import pl.com.bottega.cymes.showscheduler.adapters.MovieCatalogAdapter;
+import pl.com.bottega.cymes.showscheduler.adapters.RestTemplateMovieCatalogAdapter;
 import pl.com.bottega.cymes.showscheduler.domain.Movie;
-
-import javax.inject.Inject;
+import pl.com.bottega.cymes.showscheduler.domain.MovieCatalog;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
@@ -19,7 +19,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class MovieCatalogAdapterTest {
 
     @Autowired
-    private MovieCatalogAdapter movieCatalogAdapter;
+    private MovieCatalog movieCatalogAdapter;
 
     private ObjectMapper objectMapper = new ObjectMapper();
 
